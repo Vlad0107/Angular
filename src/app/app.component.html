@@ -1,4 +1,21 @@
 <app-kello></app-kello>
 <app-henkilot></app-henkilot>
 <app-paiva></app-paiva>
-<p *ngFor='let maa of maat'>{{maa.name}}, {{maa.population}}</p>
+<table class="table talbe-striped">
+    <thead class="black white-text">
+        <tr>
+          <th scope="col">Country</th>
+          <th scope="col">Population</th>
+          <th scope="col">Percentage</th>
+          <th scope="col">Position</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let maa of maat">
+            <td>{{maa.name}}</td>
+            <td>{{ maa.population}}</td>
+            <td>{{ maa.percentage }}</td>
+            <td *ngIf="maa.position % 2">{{maa.position}}</td>
+        </tr>
+    </tbody>
+</table>

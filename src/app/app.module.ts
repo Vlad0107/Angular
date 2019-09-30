@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdTableBasic } from './table-basic';
 
 import { AppComponent } from './app.component';
 import { HenkilotComponent } from './henkilot/henkilot.component';
