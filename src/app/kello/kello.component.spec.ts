@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaivaComponent } from './paiva.component';
+import { KelloComponent } from './kello.component';
 
-describe('PaivaComponent', () => {
-  let component: PaivaComponent;
-  let fixture: ComponentFixture<PaivaComponent>;
+describe('KelloComponent', () => {
+  let component: KelloComponent;
+  let fixture: ComponentFixture<KelloComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaivaComponent ]
+      declarations: [ KelloComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PaivaComponent);
+    fixture = TestBed.createComponent(KelloComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
