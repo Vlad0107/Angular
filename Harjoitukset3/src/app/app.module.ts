@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { PersoncardComponent } from './personcard/personcard.component';
 import { MaatComponent } from './maat/maat.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PersoncardComponent,
-    MaatComponent
+    MaatComponent,
+
   ],
   imports: [
     AlertModule.forRoot(),

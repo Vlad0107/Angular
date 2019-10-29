@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+
 
 @Component({
   selector: 'app-maat',
@@ -39,11 +40,34 @@ export class MaatComponent implements OnInit {
     {ID: '1095', name: 'Ukraine', population: '46044304', percentage: '0,67%', position: '29'},
     {ID: '1096', name: 'United Republic of Tanzania', population: '44973330', percentage: '0,65%', position: '30'}
   ];
+
+  selectedcountries: any[] = [];
   
   constructor() { }
 
   ngOnInit() {
     this.maat;
+    this.selectedcountries = [];
+  }
+  save(name) {
+    let add: boolean = true;
+    for( var i = 0; i < this.selectedcountries.length; i++){ 
+      if ( this.selectedcountries[i] === name) {
+        add = false;
+      }
+   }
+    if(add){
+    this.selectedcountries.push(name);
+    console.log(this.selectedcountries);
+   }  
   }
 
+  remove(name) {
+    for( var i = 0; i < this.selectedcountries.length; i++){ 
+      if ( this.selectedcountries[i] === name) {
+        this.selectedcountries.splice(i, 1); 
+      }
+   }
+   console.log(this.selectedcountries);
+  }
 }
